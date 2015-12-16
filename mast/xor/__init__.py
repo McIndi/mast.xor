@@ -21,7 +21,8 @@ from itertools import cycle, izip
 
 
 def xorencode(string, key="_"):
-    """Return the base64 encoded XORed version of string. This is XORed with
+    """
+    Return the base64 encoded XORed version of string. This is XORed with
     key which defaults to a single underscore.
 
     Usage:
