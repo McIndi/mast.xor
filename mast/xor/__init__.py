@@ -1,13 +1,15 @@
 """
+_module_: `mast.xor`
+
 This module provides two functions which help with the obfuscation
 of credentials. __NOTE__ that this is only obfuscation as it will
 default to using a key of a single `_` (underscore), so it will be
 pretty easy to get at the plain-text. This is merely meant to prevent
 accidental glances at the credentials. The two functions are:
 
-1. __xorencode(string, key="_")__: Returns a base64 encoded and xored
+1. `xorencode(string, key="_")`: Returns a base64 encoded and xored
 string with key
-2. __xordecode(string, key="_")__: Returns a base64 decoded and un-xored
+2. `xordecode(string, key="_")`: Returns a base64 decoded and un-xored
 string with key
 
 Although, from a purely theoretical point of view, this can be used to
@@ -22,6 +24,8 @@ from itertools import cycle, izip
 
 def xorencode(string, key="_"):
     """
+    _function_: `mast.xor.xorencode(string, key="_")`
+
     Return the base64 encoded XORed version of string. This is XORed with
     key which defaults to a single underscore.
 
@@ -44,6 +48,8 @@ def xorencode(string, key="_"):
 
 def xordecode(string, key="_"):
     """
+    _function_: `mast.xor.xordecode(string, key="_")`
+
     Returns the base64 decoded, XORed version of string. This is XORed with
     key, which defaults to a single underscore
 
