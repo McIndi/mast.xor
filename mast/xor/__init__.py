@@ -18,9 +18,11 @@ with a [one-time pad](https://en.wikipedia.org/wiki/One-time_pad), but
 in reality it is very difficult to use a one-time pad for computer
 security.
 """
+import os
 import base64
 from itertools import cycle, izip
 
+__version__ = "{}-0".format(os.environ["MAST_VERSION"])
 
 def xorencode(string, key="_"):
     """
